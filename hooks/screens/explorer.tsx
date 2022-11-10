@@ -318,7 +318,52 @@ const Collections = () => {
 };
 
 const Users = () => {
-  return <div>Users</div>;
+  return (
+    <div className="flex flex-col justify-center items-center gap-3 w-full">
+      <div className="flex justify-center md:justify-start items-center w-full gap-5 px-1">
+        <button className="bg-[#7d7d7d]/30 text-white font-bold p-3 flex items-center rounded-md backdrop-blur-[30.7px]">
+          <FiRefreshCw />
+        </button>
+        <div className="bg-[#7d7d7d]/30  flex-1 flex items-center rounded-[10px] mr-2 text-white backdrop-blur-[30.7px]">
+          <span className="text-white p-3">
+            <FiSearch />
+          </span>
+          <input
+            className="bg-transparent w-full text-white font-outfit text-sm font-medium p-2 outline-none"
+            type="text"
+            placeholder="Search Collections"
+          />
+        </div>
+      </div>
+      <div className="flex gap-6 w-full flex-wrap flex-col md:flex-row px-2 pt-10">
+        {_.map(mockData2, (data, index) => (
+          <div key={index} className="w-[295px]">
+            <div className="w-full rounded-[20px] px-0  border border-[#fff] flex flex-col justify-center items-center gap-8">
+              <div
+                style={{ backgroundImage: `url(${data.banner})` }}
+                className="rounded-[20px] h-[197px] w-full bg-cover flex justify-start items-end px-2"
+              >
+                <div className="avatar relative bottom-[-20px]">
+                  <div className="w-14 rounded-xl">
+                    <img src={data.image} alt={data.name} />
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between items-center w-full gap-3 p-4">
+                <div className="flex flex-col">
+                  <span className="text-sm font-monumentExtended text-[#ccc]">VEFI Fam</span>
+                  <span className="text-xs font-monumentExtended text-[#ccc] leading-8">24.5K followers</span>
+                </div>
+                <div className="flex">
+                  <button className="bg-[#D9D9D9] p-3 rounded-md cursor-pointer">Follow</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export const useExplorerComponent = (tab: Tabs) => {
