@@ -11,6 +11,14 @@ const mockData = [
     highestBid: '200 wETH'
   },
   {
+    collectionName: 'Planet Girls',
+    name: 'Planet Girl #1',
+    image: '/placeholders/images/NFT2.png',
+    blockChain: 'Ethereum',
+    price: '150 wETH',
+    highestBid: '200 wETH'
+  },
+  {
     collectionName: 'Depraved Generals',
     name: 'General Walstein',
     image: '/placeholders/images/NFT1.png',

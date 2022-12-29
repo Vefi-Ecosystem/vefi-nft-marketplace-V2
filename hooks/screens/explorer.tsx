@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import _ from 'lodash';
 import { FiCheck, FiChevronDown, FiChevronLeft, FiChevronRight, FiChevronUp, FiRefreshCw, FiSearch } from 'react-icons/fi';
 import chains from '../../assets/chains.json';
+import Image from 'next/image'
 
 const mockData = [
   {
@@ -13,6 +14,46 @@ const mockData = [
     price: '150 wETH',
     highestBid: '200 wETH'
   },
+    {
+        collectionName: 'Planet Girls',
+        name: 'Planet Girl #1',
+        image: '/placeholders/images/NFT2.png',
+        blockChain: 'Ethereum',
+        price: '150 wETH',
+        highestBid: '200 wETH'
+    },
+    {
+        collectionName: 'Planet Girls',
+        name: 'Planet Girl #1',
+        image: '/placeholders/images/NFT2.png',
+        blockChain: 'Ethereum',
+        price: '150 wETH',
+        highestBid: '200 wETH'
+    },
+    {
+        collectionName: 'Planet Girls',
+        name: 'Planet Girl #1',
+        image: '/placeholders/images/NFT2.png',
+        blockChain: 'Ethereum',
+        price: '150 wETH',
+        highestBid: '200 wETH'
+    },
+    {
+        collectionName: 'Planet Girls',
+        name: 'Planet Girl #1',
+        image: '/placeholders/images/NFT2.png',
+        blockChain: 'Ethereum',
+        price: '150 wETH',
+        highestBid: '200 wETH'
+    },
+    {
+        collectionName: 'Planet Girls',
+        name: 'Planet Girl #1',
+        image: '/placeholders/images/NFT2.png',
+        blockChain: 'Ethereum',
+        price: '150 wETH',
+        highestBid: '200 wETH'
+    },
   {
     collectionName: 'Depraved Generals',
     name: 'General Walstein',
@@ -56,6 +97,14 @@ const mockData = [
 ];
 
 const mockData2 = [
+  {
+    banner: '/placeholders/images/goated.png',
+    image: '/placeholders/images/hobo.png',
+    totalVolume: 4000,
+    floorPrice: 200,
+    name: 'Excelsior',
+    owners: 200
+  },
   {
     banner: '/placeholders/images/goated.png',
     image: '/placeholders/images/hobo.png',
@@ -153,8 +202,16 @@ const NFTs = () => {
           <div className="flex flex-col gap-2 justify-center items-center w-full px-2">
             <div tabIndex={0} className="collapse collapse-arrow border-b border-b-[#fff] w-full flex items-center">
               <input type="checkbox" className="peer" />
-              <div className="collapse-title font-monumentExtended">
-                <span className="text-white">Blockchain</span>
+              <div className="collapse-title font-monumentExtended flex space-x-6">
+                  <div>
+                      <Image src='/explore.png' width={40} height={40} alt='yo'/>
+
+                  </div>
+                <div>
+                  <p className='text-white'>Explore</p>
+                  <span className="text-white">Blockchain</span>
+                </div>
+
               </div>
               <div className="collapse-content">Something</div>
             </div>
@@ -179,6 +236,21 @@ const NFTs = () => {
               </div>
               <div className="collapse-content">Something</div>
             </div>
+              <div tabIndex={0} className="collapse collapse-arrow border-b border-b-[#fff] w-full flex items-center">
+                  <input type="checkbox" className="peer" />
+                  <div className="collapse-title font-monumentExtended">
+                      <span className="text-white">Type</span>
+                  </div>
+                  <div className="collapse-content">Something</div>
+              </div>
+              <div tabIndex={0} className="collapse collapse-arrow border-b border-b-[#fff] w-full flex items-center">
+                  <input type="checkbox" className="peer" />
+                  <div className="collapse-title font-monumentExtended">
+                      <span className="text-white">Options</span>
+                  </div>
+                  <div className="collapse-content">Something</div>
+              </div>
+
           </div>
         </Transition>
         <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center w-full flex-1 overflow-auto px-2 py-2 md:my-auto my-2 gap-2 transition-all ease-in-out duration-[500ms]">
